@@ -112,10 +112,10 @@
     this.models = {};
     this.model_names = [];
 
-    this.base_json_path = "/" + this.key + "/values/links?alt=json&key=AIzaSyA7rs0e1NTyMKAZA3udcrhQaTAPwjZbyU8";
+    this.base_json_path = "/" + this.key + "/values/links?alt=json";
 
     if (inNodeJS || supportsCORS) {
-      this.base_json_path += '';
+      this.base_json_path += '&key=AIzaSyA7rs0e1NTyMKAZA3udcrhQaTAPwjZbyU8';
     } else {
       this.base_json_path += 'json-in-script';
     }
