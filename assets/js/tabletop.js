@@ -65,7 +65,7 @@
     this.debug = !!options.debug;
     this.query = options.query || '';
     this.orderby = options.orderby;
-    this.endpoint = options.endpoint || "https://spreadsheets.google.com";
+    this.endpoint = options.endpoint || "https://sheets.googleapis.com/v4/spreadsheets";
     this.singleton = !!options.singleton;
     this.simple_url = !!options.simple_url;
     this.callbackContext = options.callbackContext;
@@ -112,10 +112,10 @@
     this.models = {};
     this.model_names = [];
 
-    this.base_json_path = "/feeds/worksheets/" + this.key + "/public/basic?alt=";
+    this.base_json_path = "/" + this.key + "/values/links?alt=json&key=AIzaSyA7rs0e1NTyMKAZA3udcrhQaTAPwjZbyU8";
 
     if (inNodeJS || supportsCORS) {
-      this.base_json_path += 'json';
+      this.base_json_path += '';
     } else {
       this.base_json_path += 'json-in-script';
     }
